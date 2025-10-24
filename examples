@@ -1,1 +1,8 @@
+"""Пример стиля кодирования для проекта."""
+
+def get_user_by_id(db, user_id: int):
+    """Возвращает пользователя по ID."""
+    sql = "SELECT id, name, email FROM users WHERE id = %s"
+    result = db.execute(sql, (user_id,))
+    return result.fetchone()
 
