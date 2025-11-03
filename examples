@@ -1,12 +1,3 @@
-"""Пример кода, соответствующий руководству по стилю."""
-
-def get_user(db, user_id: int) -> dict:
-    """Возвращает данные пользователя по id (безопасный, параметризованный запрос)."""
-    query = "SELECT id, name, email FROM users WHERE id = %s"
-    try:
-        result = db.execute(query, (user_id,))
-    except Exception as e:
-        # логируем и пробрасываем исключение
-        raise
-    return result.fetchone()
+bad_example.py, 
+good_example.py
 
